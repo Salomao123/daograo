@@ -19,12 +19,12 @@ function Login({ estado }) {
   const [password, setPassword] = useState(null);
 
   entrar = async () => {
-    const response = await api.post("/authentication", {
+    const response = await fetch("/authentication", {
       username,
       password
     });
 
-    console.tron.log(response);
+    console.tron.log({ response });
   };
 
   return (
