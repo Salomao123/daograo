@@ -1,4 +1,4 @@
-import "./config/ReacotronConfig";
+import "./config/ReactotronConfig";
 
 import React from "react";
 

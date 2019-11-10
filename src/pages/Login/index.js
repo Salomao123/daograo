@@ -19,9 +19,8 @@ function Login({ estado }) {
   const [password, setPassword] = useState(null);
 
   entrar = async () => {
-    const response = await fetch("/authentication", {
-      username,
-      password
+    const response = await api.request({
+      method: "GET",
     });
 
     console.tron.log({ response });
@@ -36,6 +35,9 @@ function Login({ estado }) {
       </Text>
 
       <TextInput
+        autoCapitalize={"none"}
+        keyboardAppearance={"dark"}
+        keyboardType={"email-address"}
         style={styles.input}
         placeholder="Usuario"
         value={username}
@@ -43,6 +45,8 @@ function Login({ estado }) {
       />
 
       <TextInput
+        autoCapitalize={"none"}
+        keyboardAppearance={"dark"}
         style={styles.input}
         placeholder="Senha"
         secureTextEntry
